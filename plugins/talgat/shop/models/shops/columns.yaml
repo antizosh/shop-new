@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: Название
+        type: text
+    price:
+        label: Цена
+        type: text
+    description:
+        label: Описание
+        type: text

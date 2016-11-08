@@ -1,0 +1,10 @@
+name: Shop
+form: $/talgat/shop/models/shops/fields.yaml
+modelClass: Talgat\Shop\Models\Shops
+defaultRedirect: talgat/shop/shop
+create:
+    redirect: 'talgat/shop/shop/update/:id'
+    redirectClose: talgat/shop/shop
+update:
+    redirect: talgat/shop/shop
+    redirectClose: talgat/shop/shop

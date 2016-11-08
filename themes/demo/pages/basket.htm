@@ -1,0 +1,107 @@
+title = "Корзина"
+url = "/basket"
+layout = "my"
+is_hidden = 0
+==
+<?php
+function onStart(){
+    $shop = Shop::get();
+    $array =[];
+    $total = 0;
+    foreach($shop as $Shop){
+        $id =$shop->id;
+        if (Session::has('pizza'.$id)){
+            $price = $shop->price;
+            $title = $shop->title;
+            $quantity = Session::get('shop'.$id,0);
+            
+            $total += $quantity*$price;
+        array_push($array, compact('title','price', 'id', 'quantity'));
+        }
+    
+    }
+    $this['total'] = $total;
+    $this['pizzas'] = $array;
+   
+
+
+}
+
+
+
+function onSend (){
+    $name = post('name');
+    $phone = post ('phone');
+    $address = post ('address');
+    $order = post ('order');
+    
+    $vars = compact('name', 'pnone', 'address', 'order');
+    
+    Mail::send('new.order', $vars, function($message) {
+        $message->to("antizosh.matador@gmail.com");
+    
+    });
+    
+    
+
+}
+    
+            
+    function onFlush() {
+    
+    $Session::flush();
+?>
+==
+<div id="navigation">
+            </div>
+                <div id="menu">
+                  <ul>
+                      {% component 'builderList' %}
+                  </ul>
+                 </div>
+                  <div id="content">
+                  
+                  
+                  
+                  
+                  
+                  <div class="col-md-12">
+        <h1 class="page-title">Корзина</h1>
+  
+</header>
+<main class="main" role="main">
+ <div class="container">
+ 	<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    {%for pizza in pizzas%}
+        <h2>{{shop.title}} x {{shop.quantity}}шт. = {{shop.price*Shop.quantity}} 
+            тг. </h2>
+    {% endfor%}
+    
+    <h3>Сумма {{total}} </h3>
+   
+   {% if user %}
+   
+   <form data-request="onSend" data-request-redirect="/">
+       <input type="text" name='name' placeholder="Имя" value="{{user.name}}" class="form-control">
+        <input type="text" name='phone' placeholder="Телефон" class="form-control">
+        <input type="text" name='address' placeholder="введите адрес" buttonclass="form-control">
+        <input type="hidden" name="order" value="{%for shop in shops%}
+        h2>{{shop.title}} x {{shop.quantity}}шт. = {{shop.price*Shop.quantity}} 
+            тг. </h2>
+    {% endfor%}
+       
+       <h3>Сумма {{total}} </h3>">
+       
+       <button type='submit' class=btn btn=success"> Отправить заказ</button>
+    </form>
+    
+    <button data-request="onFlush" data-request-redirect="/" class="btn btn-danger">Очистить корзину</button>
+    
+    
+    {%else%}
+        <h2>Для отправки заказа нужна <a href="{{'login'| page}}"> регистрация </a> </h2>
+        
+        {%endif%}
+    	
+    </div>

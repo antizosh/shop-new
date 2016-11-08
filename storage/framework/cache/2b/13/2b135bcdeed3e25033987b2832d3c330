@@ -1,0 +1,72 @@
+1478616796a:1:{s:6:"my.htm";a:6:{s:8:"fileName";s:6:"my.htm";s:7:"content";s:1287:"==
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title> Интернет магазин Крокодил
+          </title>
+          <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+          <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        
+        {% styles %}
+      </head> 
+      <body>
+          
+          <ul class="menu">
+              <li><a href="/hom">Главная</a></li>
+                     <li><a href="">Вход</a></li>
+                         <li><a href="">Регистрация</a></li>
+                             <li><a href="/basket">Корзина</a></li>
+          </ul>
+          
+          
+          {%partial 'header'%}
+          {%page%}
+          {%partial 'footer'%}
+      
+       <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>";s:5:"mtime";i:1478613619;s:6:"markup";s:1284:"<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title> Интернет магазин Крокодил
+          </title>
+          <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+          <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        
+        {% styles %}
+      </head> 
+      <body>
+          
+          <ul class="menu">
+              <li><a href="/hom">Главная</a></li>
+                     <li><a href="">Вход</a></li>
+                         <li><a href="">Регистрация</a></li>
+                             <li><a href="/basket">Корзина</a></li>
+          </ul>
+          
+          
+          {%partial 'header'%}
+          {%page%}
+          {%partial 'footer'%}
+      
+       <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

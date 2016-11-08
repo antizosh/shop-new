@@ -1,0 +1,48 @@
+fields:
+    name:
+        label: Название
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: Описание
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    price:
+        label: Цена
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    image:
+        label: Картинка
+        oc.commentPosition: ''
+        mode: file
+        span: auto
+        type: mediafinder
+    instock:
+        label: Наличие
+        span: auto
+        type: switch
+    slug:
+        label: ссылка
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    presentation:
+        label: Презентация
+        span: auto
+        type: text
+    categories:
+        label: Categories
+        nameFrom: category_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    video_url:
+        label: 'Youtube Link'
+        span: auto
+        type: text

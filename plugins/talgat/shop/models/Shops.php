@@ -1,0 +1,36 @@
+<?php namespace Talgat\Shop\Models;
+
+use Model;
+
+/**
+ * Model
+ */
+class Shops extends Model
+{
+    use \October\Rain\Database\Traits\Validation;
+
+    /*
+     * Validation
+     */
+    public $rules = [
+    ];
+
+    /*
+     * Disable timestamps by default.
+     * Remove this line if timestamps are defined in the database table.
+     */
+    public $timestamps = false;
+
+    /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'talgat_shop_';
+    
+    public $belongsToMany = ['categories'=>[
+        'talgat\shop\models\Categories', 
+        'table' => 'talgat_shop_shop_categories', 
+        'order' => 'categories'
+        ]
+        
+        ];
+}

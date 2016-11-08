@@ -1,0 +1,8 @@
+1478616796a:1:{s:10:"header.htm";a:6:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:200:"==
+<div id="container">
+          <div id="header">
+            <img class='logo'  src="{{'assets/images/logo.png'|theme}}"> <h1>Интернет магазин Крокодил</h1>
+        </div>";s:5:"mtime";i:1478100024;s:6:"markup";s:197:"<div id="container">
+          <div id="header">
+            <img class='logo'  src="{{'assets/images/logo.png'|theme}}"> <h1>Интернет магазин Крокодил</h1>
+        </div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

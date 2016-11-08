@@ -1,0 +1,108 @@
+body {
+background-image: url("../images/body_background.jpg");
+color: white;
+font-family: 'Philosopher', sans-serif;
+font-size: 10px;
+}
+
+#container {
+background: #FFFFFF;
+margin: 30px auto;
+width: 900px;
+height: 1000px;
+}
+
+#header {
+background: grey;
+height: 100px;
+width: 900px;
+}
+
+h1 {
+    font-size:35px;
+    text-align: center;
+     padding-top: 3%;
+}
+
+.logo {
+    
+    margin-left: 3%;
+    margin-top: 3px;
+    float: left;
+    width: 10%;
+}
+.header h1{
+   
+    float: right;
+    width:85%;
+}
+
+
+.item img {
+    width:100%;
+    
+    }
+
+.item_product {
+   text-align: center;
+}
+
+
+#navigation {
+background: #a2a2a2;
+width: 900px;
+height: 20px;
+}
+
+#menu {
+background: #333333;
+float: left;
+width: 200px;
+height: 600px;
+}
+
+#content {
+background: #d2d0d2;
+float: right;
+width: 700px;
+height: 600px;
+}
+
+#footer {
+background: #838283;
+height: 180px;
+width: 900px;
+}
+
+.menu {
+margin 0 0 0 200px;
+}
+
+
+ul.menu li {
+list-style-type: none;
+display: inline;
+margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

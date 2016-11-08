@@ -1,0 +1,10 @@
+name: Category
+form: $/talgat/shop/models/categories/fields.yaml
+modelClass: Talgat\Shop\Models\Categories
+defaultRedirect: talgat/shop/category
+create:
+    redirect: 'talgat/shop/category/update/:id'
+    redirectClose: talgat/shop/category
+update:
+    redirect: talgat/shop/category
+    redirectClose: talgat/shop/category

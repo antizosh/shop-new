@@ -1,0 +1,41 @@
+title = "hom"
+url = "/hom"
+layout = "my"
+is_hidden = 0
+
+[builderList]
+modelClass = "Talgat\Shop\Models\Categories"
+scope = "-"
+displayColumn = "category_title"
+noRecordsMessage = "No records found"
+detailsPage = "categories"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+<?php
+use talgat\shop\models\Shops;
+
+
+function onStart(){
+    
+    $items = Shops::get();
+    $this['items'] = $items;
+    
+    }
+?>
+==
+<div id="navigation">
+            </div>
+                <div id="menu">
+                  <ul>
+                      {% component 'builderList' %}
+                  </ul>
+               </div>
+                   <div id="content">
+                   {%for item in items %}
+                        
+                     <a href="/product/{{item.slug}}"> <h2>{{item.name}}</h2></a> 
+                       
+                   {%endfor%}
+                     </div>

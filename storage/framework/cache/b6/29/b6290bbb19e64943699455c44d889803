@@ -1,0 +1,77 @@
+1478617206a:1:{s:11:"product.htm";a:11:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:1945:"title = "product"
+url = "/product/:slug"
+layout = "my"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Talgat\Shop\Models\Shops"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+
+[builderList]
+modelClass = "Talgat\Shop\Models\Categories"
+scope = "-"
+displayColumn = "category_title"
+noRecordsMessage = "No records found"
+detailsPage = "categories"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+<div id="navigation">
+              </div>
+                <div id="menu">
+                  {% component 'builderList' %}
+                 </div>
+                    <div id="content">
+                        {% set record = builderDetails.record %}
+                        {% set displayColumn = builderDetails.displayColumn %}
+                        {% set notFoundMessage = builderDetails.notFoundMessage %}
+
+                        {% if record %}
+                            <div class="col-md-12">
+                            <div class="col-md-6" class="item">
+                              <img src="{{record.image|media}}" class="img-responsive">
+                             </div>
+                             </div>
+                             <div class="col-md-6">
+                            <h1>{{ attribute(record, displayColumn) }}</h1>
+                            <p class="item_product"> {{record.description}} </p>
+                            <p class="item_product"> {{record.price}} </p>
+                            {{record.video_url}}
+                            <iframe width="560" height="315" src="{{record.video_url}}" frameborder="0" allowfullscreen></iframe>
+                           </div> 
+                        
+                                {% else %}
+                            {{ notFoundMessage }}
+                                    {% endif %}
+                    </div>";s:5:"mtime";i:1478615376;s:6:"markup";s:1447:"<div id="navigation">
+              </div>
+                <div id="menu">
+                  {% component 'builderList' %}
+                 </div>
+                    <div id="content">
+                        {% set record = builderDetails.record %}
+                        {% set displayColumn = builderDetails.displayColumn %}
+                        {% set notFoundMessage = builderDetails.notFoundMessage %}
+
+                        {% if record %}
+                            <div class="col-md-12">
+                            <div class="col-md-6" class="item">
+                              <img src="{{record.image|media}}" class="img-responsive">
+                             </div>
+                             </div>
+                             <div class="col-md-6">
+                            <h1>{{ attribute(record, displayColumn) }}</h1>
+                            <p class="item_product"> {{record.description}} </p>
+                            <p class="item_product"> {{record.price}} </p>
+                            {{record.video_url}}
+                            <iframe width="560" height="315" src="{{record.video_url}}" frameborder="0" allowfullscreen></iframe>
+                           </div> 
+                        
+                                {% else %}
+                            {{ notFoundMessage }}
+                                    {% endif %}
+                    </div>";s:4:"code";N;s:5:"title";s:7:"product";s:3:"url";s:14:"/product/:slug";s:6:"layout";s:2:"my";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:24:"Talgat\Shop\Models\Shops";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:4:"name";s:15:"notFoundMessage";s:16:"Record not found";}s:11:"builderList";a:8:{s:10:"modelClass";s:29:"Talgat\Shop\Models\Categories";s:5:"scope";s:1:"-";s:13:"displayColumn";s:14:"category_title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:10:"categories";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}}}

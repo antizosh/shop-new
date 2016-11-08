@@ -1,0 +1,6 @@
+columns:
+    category_title:
+        label: категория
+        type: text
+        searchable: true
+        sortable: true

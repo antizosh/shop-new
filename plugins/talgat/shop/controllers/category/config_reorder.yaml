@@ -1,0 +1,4 @@
+title: Category
+modelClass: Talgat\Shop\Models\Categories
+toolbar:
+    buttons: reorder_toolbar

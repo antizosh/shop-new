@@ -1,0 +1,12 @@
+fields:
+    category_title:
+        label: категория
+        span: auto
+        type: text
+    slug:
+        label: ссылка
+        span: auto
+        preset:
+            field: category_title
+            type: slug
+        type: text

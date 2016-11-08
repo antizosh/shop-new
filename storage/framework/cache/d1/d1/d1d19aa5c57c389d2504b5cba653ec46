@@ -1,0 +1,81 @@
+1478616813a:1:{s:14:"categories.htm";a:11:{s:8:"fileName";s:14:"categories.htm";s:7:"content";s:1129:"title = "categories"
+url = "/categories/:slug"
+layout = "my"
+is_hidden = 0
+
+[builderList]
+modelClass = "Talgat\Shop\Models\Categories"
+scope = "-"
+displayColumn = "category_title"
+noRecordsMessage = "No records found"
+detailsPage = "categories"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+
+[builderDetails]
+modelClass = "Talgat\Shop\Models\Categories"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "category_title"
+notFoundMessage = "Record not found"
+==
+<div id="menu">
+<ul>
+                    
+{% component 'builderList' %}
+
+  </ul>
+</div>
+ 
+ 
+ 
+ <div id="content">
+    
+   {% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    
+    {%for item in record.items%}
+       <a href="/product/{{item.slug}}"><h2>{{ item.name}}</h2></a>
+    
+    <img src={{record.image|media}}>
+    <p> {{record.price}} </p>
+       
+       
+       {%endfor%}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+                    </div>";s:5:"mtime";i:1478616210;s:6:"markup";s:610:"<div id="menu">
+<ul>
+                    
+{% component 'builderList' %}
+
+  </ul>
+</div>
+ 
+ 
+ 
+ <div id="content">
+    
+   {% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    
+    {%for item in record.items%}
+       <a href="/product/{{item.slug}}"><h2>{{ item.name}}</h2></a>
+    
+    <img src={{record.image|media}}>
+    <p> {{record.price}} </p>
+       
+       
+       {%endfor%}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+                    </div>";s:4:"code";N;s:5:"title";s:10:"categories";s:3:"url";s:17:"/categories/:slug";s:6:"layout";s:2:"my";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:8:{s:10:"modelClass";s:29:"Talgat\Shop\Models\Categories";s:5:"scope";s:1:"-";s:13:"displayColumn";s:14:"category_title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:10:"categories";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}s:14:"builderDetails";a:5:{s:10:"modelClass";s:29:"Talgat\Shop\Models\Categories";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:14:"category_title";s:15:"notFoundMessage";s:16:"Record not found";}}}

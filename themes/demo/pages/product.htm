@@ -1,0 +1,50 @@
+title = "product"
+url = "/product/:slug"
+layout = "my"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Talgat\Shop\Models\Shops"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+
+[builderList]
+modelClass = "Talgat\Shop\Models\Categories"
+scope = "-"
+displayColumn = "category_title"
+noRecordsMessage = "No records found"
+detailsPage = "categories"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+<div id="navigation">
+              </div>
+                <div id="menu">
+                  {% component 'builderList' %}
+                 </div>
+                    <div id="content">
+                        {% set record = builderDetails.record %}
+                        {% set displayColumn = builderDetails.displayColumn %}
+                        {% set notFoundMessage = builderDetails.notFoundMessage %}
+
+                        {% if record %}
+                            <div class="col-md-12">
+                            <div class="col-md-6" class="item">
+                              <img src="{{record.image|media}}" class="img-responsive">
+                             </div>
+                             </div>
+                             <div class="col-md-6">
+                            <h1>{{ attribute(record, displayColumn) }}</h1>
+                            <p class="item_product"> {{record.description}} </p>
+                            <p class="item_product"> {{record.price}} </p>
+                            {{record.video_url}}
+                            <iframe width="560" height="315" src="{{record.video_url}}" frameborder="0" allowfullscreen></iframe>
+                           </div> 
+                        
+                                {% else %}
+                            {{ notFoundMessage }}
+                                    {% endif %}
+                    </div>

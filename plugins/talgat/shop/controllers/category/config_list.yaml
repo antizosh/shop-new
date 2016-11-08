@@ -1,0 +1,11 @@
+list: $/talgat/shop/models/categories/columns.yaml
+modelClass: Talgat\Shop\Models\Categories
+title: Category
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'talgat/shop/category/update/:id'

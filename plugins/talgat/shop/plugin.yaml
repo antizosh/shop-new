@@ -1,0 +1,16 @@
+plugin:
+    name: 'talgat.shop::lang.plugin.name'
+    description: 'talgat.shop::lang.plugin.description'
+    author: Talgat
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Menu Item'
+        url: talgat/shop/shop
+        icon: icon-circle
+        sideMenu:
+            side-menu-item:
+                label: Категория
+                url: talgat/shop/category
+                icon: icon-soccer-ball-o
